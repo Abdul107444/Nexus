@@ -43,7 +43,12 @@ export const Sidebar: React.FC = () => {
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/documents', icon: <FileText size={20} />, text: 'Documents' },
+    { to: '/calendar', icon: <Bell size={20} />, text: 'Calendar' },
+{ to: '/videocall', icon: <MessageCircle size={20} />, text: 'Video Call' },
+{ to: '/payments', icon: <CircleDollarSign size={20} />, text: 'Payments' },
+{ to: '/security', icon: <Settings size={20} />, text: 'Security' },
   ];
+  
   
   const investorItems = [
     { to: '/dashboard/investor', icon: <Home size={20} />, text: 'Dashboard' },
@@ -52,6 +57,10 @@ export const Sidebar: React.FC = () => {
     { to: '/messages', icon: <MessageCircle size={20} />, text: 'Messages' },
     { to: '/notifications', icon: <Bell size={20} />, text: 'Notifications' },
     { to: '/deals', icon: <FileText size={20} />, text: 'Deals' },
+    { to: '/calendar', icon: <Bell size={20} />, text: 'Calendar' },
+{ to: '/videocall', icon: <MessageCircle size={20} />, text: 'Video Call' },
+{ to: '/payments', icon: <CircleDollarSign size={20} />, text: 'Payments' },
+{ to: '/security', icon: <Settings size={20} />, text: 'Security' },
   ];
   
   const sidebarItems = user.role === 'entrepreneur' ? entrepreneurItems : investorItems;

@@ -26,6 +26,10 @@ import { DocumentsPage } from './pages/documents/DocumentsPage';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
 import { DealsPage } from './pages/deals/DealsPage';
+import CalendarPage from './pages/calendar';
+import VideoCallPage from './pages/videocall';
+import PaymentsPage from './pages/payments';
+import SecurityPage from './pages/security';
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
@@ -95,7 +99,24 @@ function App() {
           
           {/* Catch all other routes and redirect to login */}
           <Route path="*" element={<Navigate to="/login" replace />} />
+
+          <Route path="/calendar" element={<DashboardLayout />}>
+  <Route index element={<CalendarPage />} />
+</Route>
+
+<Route path="/videocall" element={<DashboardLayout />}>
+  <Route index element={<VideoCallPage />} />
+</Route>
+
+<Route path="/payments" element={<DashboardLayout />}>
+  <Route index element={<PaymentsPage />} />
+</Route>
+
+<Route path="/security" element={<DashboardLayout />}>
+  <Route index element={<SecurityPage />} />
+</Route>
         </Routes>
+        
       </Router>
     </AuthProvider>
   );
